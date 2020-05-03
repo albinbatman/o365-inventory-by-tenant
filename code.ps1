@@ -223,11 +223,9 @@ foreach ( $Tenant in $Tenants )
             {
                 $CsvName = "no_department.csv"
                 $PathToStoreCsvFull = $PathToStoreCsvTemp + "\$($CsvName)"
-                Write-Output "User: $($User.DisplayName), Department: no_department, CsvName: $($PathToStoreCsvFull)"
             } else {
                 $CsvName = "$($User.Department).csv"
                 $PathToStoreCsvFull = $PathToStoreCsvTemp + "\$($CsvName)"
-                Write-Output "User: $($User.DisplayName), Department: $($User.Department), CsvName: $($PathToStoreCsvFull)"
             }
 
            If(!(Test-Path $PathToStoreCsvFull))
